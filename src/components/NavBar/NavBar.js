@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
-        <h1>Leafy.io</h1>
+        <h1 className="logo">Leafy.io</h1>
       </Link>
       <ul className={clickHamb ? "nav-menu active" : "nav-menu"}>
         <li>
