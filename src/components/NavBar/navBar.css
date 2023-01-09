@@ -36,9 +36,16 @@
 }
 
 .nav-menu:not(.active) li a:hover {
-    background-color: #000000f4;
+    background-color: #000000d9;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
+    color: #fff37f;
+}
+
+.active {
+    background-color: #000000d9;
+    border-radius: 4px;
+    color: #fff37f;
 }
 
 .hamb {
@@ -80,6 +87,11 @@
 
     .nav-menu li a {
         font-size: 2rem;
+    }
+
+    .nav-menu li a:hover{
+        color: #fff37f;
+        transition: all 0.3s ease-in-out;
     }
 
     .hamb {
