@@ -1,14 +1,14 @@
-import WorkCard from "../WorkCard/WorkCard";
-import WorkCardData from "../../assets/WorkCardData"
+import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCardData from "../../assets/ProjectCardData"
 
-const Work = () => {
+const Projects = () => {
   return (
     <div className="work-container">
       <h1 className="project-heading">Projects</h1>
       <div className="project-container">
-        {WorkCardData.map((value, index) => {
+        {ProjectCardData.map((value, index) => {
             return (
-                <WorkCard
+                <ProjectCard
                 key={index}
                 imgsrc={value.imgsrc}
                 title={value.title}
@@ -22,4 +22,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

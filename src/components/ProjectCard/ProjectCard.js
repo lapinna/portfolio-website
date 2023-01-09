@@ -1,7 +1,6 @@
-import "./workCard.css";
-import { NavLink } from "react-router-dom";
+import "./projectCard.css";
 
-const WorkCard = (props) => {
+const ProjectCard = (props) => {
   return (
     <div className="project-card">
       <img src={props.imgsrc} alt="Project image" />
@@ -9,16 +8,16 @@ const WorkCard = (props) => {
       <div className="project-details">
         <p>{props.text}</p>
         <div className="project-btns">
-          <NavLink to={props.view} className="btn">
+          <a href={props.view} className="btn">
             View
-          </NavLink>
-          <NavLink to="url.com" className="btn">
+          </a>
+          <a href="https://github.com/lapinna/treasure-hunt" className="btn">
             Source
-          </NavLink>
+          </a>
         </div>
       </div>
     </div>
   );
 };
 
-export default WorkCard;
+export default ProjectCard;
