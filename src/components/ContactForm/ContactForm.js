@@ -1,6 +1,6 @@
 import "./contactForm.css";
 import { useRef, useState } from "react";
-import { Modal, Button, Box, Typography } from "@mui/material";
+import { Modal, Box, Typography } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 const style = {
@@ -41,25 +41,27 @@ const ContactForm = () => {
           console.log(error.text);
         }
       });
+    handleOpen();
   };
   return (
     <div className="form">
       <form ref={form} onSubmit={sendEmail}>
         <label>Your Name</label>
-        <input type="text" name="user_name" />
+        <input type="text" name="user_name" required />
         <label>Email </label>
-        <input type="email" name="user_email" />
+        <input type="email" name="user_email" required />
         <label>Subject</label>
-        <input type="text" name="message_subject" />
+        <input type="text" name="message_subject" required />
         <label>Message</label>
         <textarea
           rows="6"
-          placeholder="Type Your Message Here"
+          placeholder="Please Type Your Message Here"
           name="message"
+          required
         />
-        <Button id="modal-btn" type="submit" onClick={handleOpen}>
+        <button className="btn" type="submit">
           Submit
-        </Button>
+        </button>
         <Modal
           open={open}
           onClose={handleClose}
