@@ -3,9 +3,11 @@
     margin: auto;
     padding-bottom: 6rem;
 }
+
 .slide-card {
     transition: transform 250ms;
 }
+
 .slide-card:hover {
     transform: translateY(-10px);
 }

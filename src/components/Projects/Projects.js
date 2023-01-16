@@ -1,21 +1,20 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectCardData from "../../assets/ProjectCardData"
+import useProjectsHook from "../../customHooks/useProjectsHook";
 
 const Projects = () => {
+  const projectState = useProjectsHook();
   return (
     <div className="work-container">
       <h1 className="project-heading">Projects</h1>
       <div className="project-container">
-        {ProjectCardData.map((value, index) => {
-            return (
-                <ProjectCard
-                key={index}
-                imgsrc={value.imgsrc}
-                title={value.title}
-                text={value.text}
-                view={value.view}
-                />
-            )
+        {projectState.map((project, index) => {
+          return <ProjectCard
+          key={index}
+          imgsrc={project.imgsrc}
+          title={project.title}
+          text={project.text}
+          view={project.view}
+          source={project.source} />;
         })}
       </div>
     </div>

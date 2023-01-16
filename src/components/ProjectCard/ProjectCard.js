@@ -1,17 +1,17 @@
 import "./projectCard.css";
 
-const ProjectCard = (props) => {
+const ProjectCard = ({ index, imgsrc, title, text, view, source }) => {
   return (
-    <div className="project-card">
-      <img src={props.imgsrc} alt="Project image" />
-      <h2 className="project-title">{props.title}</h2>
+    <div className="project-card" key={index}>
+      <img src={imgsrc} alt="Project image" />
+      <h2 className="project-title">{title}</h2>
       <div className="project-details">
-        <p>{props.text}</p>
+        <p>{text}</p>
         <div className="project-btns">
-          <a href={props.view} className="btn">
+          <a href={view} target="_blank" className="btn">
             View
           </a>
-          <a href="https://github.com/lapinna/treasure-hunt" className="btn">
+          <a href={source} target="_blank" className="btn">
             Source
           </a>
         </div>

@@ -2,10 +2,11 @@ import "@splidejs/react-splide/css";
 import "./projectsSlider.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectCardData from "../../assets/ProjectCardData";
+import useProjectsHook from "../../customHooks/useProjectsHook";
 import { LOOP } from "@splidejs/splide";
 
 const ProjectsSlider = () => {
+  const projectState = useProjectsHook();
   return (
     <div className="work-container">
       <h1 className="project-heading">Projects</h1>
@@ -28,15 +29,15 @@ const ProjectsSlider = () => {
             },
           }}
         >
-          {ProjectCardData.map((value, index) => {
+          {projectState.map((project, index) => {
             return (
               <SplideSlide className="slide-card">
                 <ProjectCard
                   key={index}
-                  imgsrc={value.imgsrc}
-                  title={value.title}
-                  text={value.text}
-                  view={value.view}
+                  imgsrc={project.imgsrc}
+                  title={project.title}
+                  view={project.view}
+                  source={project.source}
                 />
               </SplideSlide>
             );

@@ -25,16 +25,16 @@ const NavBar = () => {
       </Link>
       <ul className={clickHamb ? "nav-menu active" : "nav-menu"}>
         <li>
-          <NavLink to="/" exact activeClassName="active">Home</NavLink>
+          <NavLink to="/" exact="true" activeclassname="active">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active">About</NavLink>
+          <NavLink to="/about" activeclassname="active">About</NavLink>
         </li>
         <li>
-          <NavLink to="/project" activeClassName="active">Project</NavLink>
+          <NavLink to="/project" activeclassname="active">Project</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+          <NavLink to="/contact" activeclassname="active">Contact</NavLink>
         </li>
       </ul>
       <div className="hamb" onClick={handleClick}>
