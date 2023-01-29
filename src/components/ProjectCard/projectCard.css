@@ -14,32 +14,62 @@
 
 .project-card {
     background: #1a1919;
-    padding: 1.2rem 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid rgba(0, 0, 0, 0.445);
 }
 
 .project-card img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-info.active {
+    display: initial;
 }
 
 .project-title {
     color: #fff;
     padding: 1rem 0;
+    text-align: center;
 }
 
 .project-details p {
     padding-bottom: 1rem;
-    font-size: 1.1rem;
-    text-align: justify;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .project-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .project-btns .btn {
     padding: 0.5rem 1rem;
+    margin: 0.2rem;
 }
 
 @media screen and (max-width: 740px) {

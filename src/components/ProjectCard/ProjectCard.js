@@ -1,19 +1,32 @@
 import "./projectCard.css";
+import { useState } from "react";
 
 const ProjectCard = ({ index, imgsrc, title, text, view, source }) => {
+  const [cardHover, setcardHover] = useState(false);
+  const handleHover = () => setcardHover(!cardHover);
+  const handleLeave = () => setcardHover("");
   return (
-    <div className="project-card" key={index}>
-      <img src={imgsrc} alt="Project image" />
-      <h2 className="project-title">{title}</h2>
-      <div className="project-details">
-        <p>{text}</p>
-        <div className="project-btns">
-          <a href={view} target="_blank" className="btn">
-            View
-          </a>
-          <a href={source} target="_blank" className="btn">
-            Source
-          </a>
+    <div
+      className="project-card"
+      key={index}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+    >
+      <div className="card-img">
+        <img src={imgsrc} alt="Project image" />
+      </div>
+      <div className={cardHover ? "card-info active" : "card-info"}>
+        <h2 className="project-title">{title}</h2>
+        <div className="project-details">
+          <p>{text}</p>
+          <div className="project-btns">
+            <a href={view} target="_blank" className="btn">
+              View
+            </a>
+            <a href={source} target="_blank" className="btn">
+              Source
+            </a>
+          </div>
         </div>
       </div>
     </div>
