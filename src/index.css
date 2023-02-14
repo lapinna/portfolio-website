@@ -32,11 +32,6 @@ ul {
   cursor: pointer;
 }
 
-.btn-light {
-  background: transparent;
-  color: #fff;
-}
-
 .btn:hover {
   background: #ffffff33;
   color: #fff;
