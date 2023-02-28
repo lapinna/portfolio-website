@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import "./navBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import logo from "../../assets/img/logodemo.PNG"
 
 const NavBar = () => {
   const [clickHamb, setClickHamb] = useState(false);
@@ -21,7 +22,7 @@ const NavBar = () => {
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
-        <h1 className="logo">Leafy.io</h1>
+        <img src={logo} alt="Logo image" className="logo" />
       </Link>
       <ul className={clickHamb ? "nav-menu active" : "nav-menu"}>
         <li>

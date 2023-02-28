@@ -13,8 +13,8 @@ const Hero1 = () => {
         />
       </div>
       <div className="content">
-        <p>HI, I'M an aspiring</p>
-        <h1>Web Developer.</h1>
+        <p>HI, I'M Inese</p>
+        <h1>A Web Developer.</h1>
         <div>
           <Link to="/contact" className="btn">
             Contact
