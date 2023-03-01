@@ -23,7 +23,7 @@ const ProjectCard = ({ index, imgsrc, title, text, view, source }) => {
             <a href={view} target="_blank" className={view == "" || view == 0 ? "emptyBtn" : "btn"} >
               Demo
             </a>
-            <a href={source} target="_blank" className="btn">
+            <a href={source} target="_blank" className={source == "" || source == 0 ? "emptyBtn" : "btn"}>
               Code
             </a>
           </div>
