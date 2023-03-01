@@ -13,7 +13,6 @@
 }
 
 .project-card {
-    
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -22,7 +21,8 @@
 
 .project-card img {
     width: 100%;
-    height: 100%;
+    padding: 0.3rem;
+    border-radius: 15px;
     object-fit: cover;
 }
 
@@ -79,8 +79,13 @@
 
 @media screen and (max-width: 740px) {
     .project-container {
-        max-width: 90%;
+        max-width: 80%;
         margin: auto;
         grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        width: 90%;
+        margin: auto;
     }
 }
