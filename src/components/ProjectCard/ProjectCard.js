@@ -20,11 +20,11 @@ const ProjectCard = ({ index, imgsrc, title, text, view, source }) => {
         <div className="project-details">
           <p>{text}</p>
           <div className="project-btns">
-            <a href={view} target="_blank" className="btn">
-              View
+            <a href={view} target="_blank" className={view == "" || view == 0 ? "emptyBtn" : "btn"} >
+              Demo
             </a>
             <a href={source} target="_blank" className="btn">
-              Source
+              Code
             </a>
           </div>
         </div>

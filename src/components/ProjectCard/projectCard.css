@@ -13,7 +13,7 @@
 }
 
 .project-card {
-    background: #1a1919;
+    
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -27,6 +27,7 @@
 }
 
 .card-info {
+    background: #1a1919;
     display: none;
     position: absolute;
     width: 100%;
@@ -70,6 +71,10 @@
 .project-btns .btn {
     padding: 0.5rem 1rem;
     margin: 0.2rem;
+}
+
+.emptyBtn {
+    display: none;
 }
 
 @media screen and (max-width: 740px) {
